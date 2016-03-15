@@ -1,4 +1,4 @@
-var app = angular.module('yoyoDirectiveApp', ['ngRoute'])
+var app = angular.module('theTaco', ['ngRoute'])
 
 // app.controller('YoyoController', ['$scope', function($scope) {
 //   $scope.yoyos = [{name: 'Duncan Metal Drifter',

@@ -1,17 +1,62 @@
-<html ng-app="yoyoDirectiveApp">
+<html ng-app="theTaco">
 <head>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js" type="text/javascript"></script>
-<script src="/javascripts/app.js"></script>
-<script src="/javascripts/config.js"></script>
-<script src="/javascripts/contollers/YoyoController.js"></script>
-<script type="text/javascript" src="/javascripts/directives/gsYoyoDetails.js"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+ <base href="/">
+
+   <title>Taco Party</title>
+
 </head>
 <body ng-controller="YoyoController">
-  <div ng-repeat='yoyo in yoyos'>
-  <gs-yoyo-details yoyo='yoyo'></gs-yoyo-details>
+
+
+           <a class="navbar-brand" href="/">Practice FUNFUN</a>
+        
+        <div class="container-fluid c-navbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/next">Next</a></li>
+            <!-- <li><a href="#" ng-click="showme=true">Submit Post</a></li> -->
+            <li>
+             <form class="navbar-form" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" ng-model="search">
+              </div>
+            </form>
+            </li> 
+            <li>
+              <ul class="nav navbar-nav">
+               <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Displaying <span ng-bind="viewBar"></span><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" ng-click="order('rivers')">Something</a></li>
+                  <li><a href="#" ng-click="order('events')">Interesting</a></li>
+                  <li><a href="#" ng-click="order('gear')">TacoTruck</a></li>
+                  <li><a href="#" ng-click="order('favorites')">Farlitos</a></li>
+                  <li><a href="#" ng-click="order('announcements')">House</a></li>
+                  
+               </ul>
+              </li>
+             </ul>
+            </li> 
+             </ul>
+         
+      </div>
+    
+  <div ng-view></div>
+  <!-- <div ng-repeat='yoyo in yoyos'>
+  <gs-yoyo-details yoyo='yoyo'></gs-yoyo-details> -->
 </div>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script src="/javascripts/app.js"></script>
+<script src="/javascripts/config.js"></script>
+<script type="text/javascript" src="/javascripts/directives/gsYoyoDetails.js"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
-<link rel="stylesheet" type="text/css" href="/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+<script src="/javascripts/controllers/YoyoController.js"></script>
+<script src="/javascripts/controllers/NextController.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
